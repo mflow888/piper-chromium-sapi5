@@ -86,3 +86,7 @@ This project was written with the help of [Cursor](https://cursor.com).
 
 - 🔄 **Expand Compatibility**: Native support for Windows TTS programs such as Balabolka, TextAloud, DSpeech, NaturalReader, Panopreter, and ClaroRead.
 - 🎧 **Enhance Fidelity**: Continuous improvements to audio rendering quality for an even more immersive experience.
+
+## 🔗 Related Resources
+
+For recommended browser TTS extensions (with local voice support), see the project page: https://healingtools4you.com/piper-voices-sapi5-for-chromium-brave-chrome-edge-under-windows/
