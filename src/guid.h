@@ -1,0 +1,10 @@
+#pragma once
+
+#include <windows.h>
+
+// {7E4A1C38-9B52-4D6F-A1E0-6C8F3B2D94A5}
+static const CLSID CLSID_PiperBassHigh = {
+    0x7E4A1C38,
+    0x9B52,
+    0x4D6F,
+    {0xA1, 0xE0, 0x6C, 0x8F, 0x3B, 0x2D, 0x94, 0xA5}};

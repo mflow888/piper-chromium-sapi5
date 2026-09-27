@@ -1,0 +1,18 @@
+Piper SAPI5
+==========
+
+This project was written with the help of Cursor (https://cursor.com).
+
+The engine source under src is Apache License 2.0.
+Other components keep their own licenses. See the licenses directory and SECURITY.md.
+
+This software does not contain malicious code.
+
+- sherpa-onnx 1.13.7 — Apache License 2.0 — https://github.com/k2-fsa/sherpa-onnx
+- ONNX Runtime — MIT License — https://github.com/microsoft/onnxruntime
+- eSpeak NG data — GNU GPL 3.0 — https://github.com/espeak-ng/espeak-ng
+- Piper voice models — license stated in each model card under licenses/karty
+  Upstream catalog: https://huggingface.co/rhasspy/piper-voices
+
+The purpose of the project is to add these SAPI5 voices to Brave, Chrome, and other Chromium browsers.
+Narrator and many Windows desktop programs may not use them.

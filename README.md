@@ -1,0 +1,76 @@
+# Piper SAPI5
+
+Offline [Piper](https://github.com/rhasspy/piper) neural voices for Windows, exposed through the SAPI5 speech interface so Chromium browsers can use them.
+
+Brave, Chrome, Microsoft Edge, and other Chromium-based browsers can select these voices and read with them. That was the goal of this project: add Piper SAPI5 voices to Brave and Chrome.
+
+Narrator and many ordinary Windows programs may not speak with these voices. That limitation is expected. Browser playback is the supported use.
+
+The voices run on this computer. Nothing is sent to a server at speech time.
+
+## No malicious code
+
+This project does not contain malicious code.
+
+- It does not collect telemetry or personal data.
+- It does not download anything while a voice is speaking.
+- It does not install a browser extension.
+- It does not add a program that starts when Windows starts.
+- The only background process is `PiperBassHighHost.exe`, and only while a 32-bit program is speaking. Chromium browsers are 64-bit and speak inside the browser process.
+- Installing a language package copies voice files, the shared speech engine, and SAPI voice registration. Uninstalling that package removes those voices.
+
+The source in this repository is what the installers are built from.
+
+## How installation works
+
+Every language is its own installer, for example `Piper-Polish-Language-Setup.exe`.
+
+All of them install into the same folder:
+
+`C:\Program Files\Piper SAPI5`
+
+- The first language package installs the shared engine (SAPI libraries, Piper runtime, eSpeak data) and that language's voices.
+- A later language package leaves the engine where it is and adds only its own voices.
+- Each package has its own entry in Windows **Apps & features**. Uninstalling Polish removes the Polish voices and leaves German, English, or any other installed language in place.
+- The shared engine is removed only when the last language package is uninstalled.
+
+English (United States) is split into two installers because one file would be too large for a GitHub release asset. Both parts share the same engine.
+
+If an older "Polskie głosy" / Piper Bass High installer is still present, uninstall it before installing `Piper-Polish-Language-Setup.exe`. The new package uses a new folder.
+
+## Use in a browser
+
+1. Install the language package you want.
+2. Quit the browser completely, including its tray icon, and open it again.
+3. Use the browser's read-aloud command, or pick the Piper voice in the browser's speech settings.
+
+The voice list shows names such as **BASS HIGH** or **AMY MEDIUM**. The Windows language of each voice follows the Piper locale, so a Polish voice is offered for Polish text.
+
+The first time a voice is used, Windows has to load the neural model. That still takes a short moment. After that, speech starts from the first short piece of text instead of waiting for the whole page, and Stop returns without finishing the rest of the page. The loaded voice stays in the browser process until the browser exits, so the next read starts sooner.
+
+## Licenses
+
+The engine source in `src` is [Apache License 2.0](LICENSE).
+
+The installers also include other people's work. Full texts are in [`licenses`](licenses):
+
+| Piece | License |
+| --- | --- |
+| sherpa-onnx | Apache License 2.0 |
+| ONNX Runtime | MIT License |
+| eSpeak NG data | GNU GPL 3.0 |
+| Piper voice models | The license named in each model card (CC0, CC BY 4.0, Apache 2.0, or another license stated by the dataset) |
+
+Model cards are in [`licenses/karty`](licenses/karty). A per-language index is in [docs/VOICES.md](docs/VOICES.md).
+
+## Built with Cursor
+
+This project was written with the help of [Cursor](https://cursor.com).
+
+## More documentation
+
+- [Installing and removing voices](docs/INSTALL.md)
+- [How the engine and language packages fit together](docs/ARCHITECTURE.md)
+- [Building from source](docs/BUILDING.md)
+- [Publishing on GitHub](docs/PUBLISHING.md)
+- [Security notes](SECURITY.md)

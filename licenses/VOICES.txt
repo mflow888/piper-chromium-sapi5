@@ -1,0 +1,890 @@
+Piper voice packages
+====================
+
+Installed from the official Piper catalog unless noted.
+
+Piper Albanian Language
+-----------------------
+  EDON MEDIUM
+    id: sq_AL-edon-medium
+    locale: sq-AL
+    gender label: Male
+
+Piper Arabic Language
+---------------------
+  KAREEM LOW
+    id: ar_JO-kareem-low
+    locale: ar-JO
+    gender label: Male
+  KAREEM MEDIUM
+    id: ar_JO-kareem-medium
+    locale: ar-JO
+    gender label: Male
+
+Piper Armenian Language
+-----------------------
+  GOR MEDIUM
+    id: hy_AM-gor-medium
+    locale: hy-AM
+    gender label: Male
+
+Piper Basque Language
+---------------------
+  ANTTON MEDIUM
+    id: eu_ES-antton-medium
+    locale: eu-ES
+    gender label: Male
+  MAIDER MEDIUM
+    id: eu_ES-maider-medium
+    locale: eu-ES
+    gender label: Female
+
+Piper Bengali Language
+----------------------
+  GOOGLE MEDIUM (BENGALI)
+    id: bn_BD-google-medium
+    locale: bn-BD
+    gender label: Male
+
+Piper Bulgarian Language
+------------------------
+  DIMITAR MEDIUM
+    id: bg_BG-dimitar-medium
+    locale: bg-BG
+    gender label: Male
+
+Piper Catalan Language
+----------------------
+  UPC ONA MEDIUM
+    id: ca_ES-upc_ona-medium
+    locale: ca-ES
+    gender label: Female
+  UPC ONA X LOW
+    id: ca_ES-upc_ona-x_low
+    locale: ca-ES
+    gender label: Female
+  UPC PAU X LOW
+    id: ca_ES-upc_pau-x_low
+    locale: ca-ES
+    gender label: Male
+
+Piper Chinese Language
+----------------------
+  CHAOWEN MEDIUM
+    id: zh_CN-chaowen-medium
+    locale: zh-CN
+    gender label: Male
+  HUAYAN MEDIUM
+    id: zh_CN-huayan-medium
+    locale: zh-CN
+    gender label: Female
+  HUAYAN X LOW
+    id: zh_CN-huayan-x_low
+    locale: zh-CN
+    gender label: Female
+  XIAO YA MEDIUM
+    id: zh_CN-xiao_ya-medium
+    locale: zh-CN
+    gender label: Female
+
+Piper Czech Language
+--------------------
+  JIRKA LOW
+    id: cs_CZ-jirka-low
+    locale: cs-CZ
+    gender label: Male
+  JIRKA MEDIUM
+    id: cs_CZ-jirka-medium
+    locale: cs-CZ
+    gender label: Male
+  KASANDRA MEDIUM
+    id: cs_CZ-kasandra-medium
+    locale: cs-CZ
+    gender label: Female
+
+Piper Danish Language
+---------------------
+  TALESYNTESE MEDIUM (DANISH)
+    id: da_DK-talesyntese-medium
+    locale: da-DK
+    gender label: Male
+
+Piper Dutch (Belgium) Language
+------------------------------
+  NATHALIE MEDIUM
+    id: nl_BE-nathalie-medium
+    locale: nl-BE
+    gender label: Female
+  NATHALIE X LOW
+    id: nl_BE-nathalie-x_low
+    locale: nl-BE
+    gender label: Female
+  RDH MEDIUM
+    id: nl_BE-rdh-medium
+    locale: nl-BE
+    gender label: Male
+  RDH X LOW
+    id: nl_BE-rdh-x_low
+    locale: nl-BE
+    gender label: Male
+
+Piper Dutch (Netherlands) Language
+----------------------------------
+  ALEX MEDIUM
+    id: nl_NL-alex-medium
+    locale: nl-NL
+    gender label: Male
+  MLS 5809 LOW
+    id: nl_NL-mls_5809-low
+    locale: nl-NL
+    gender label: Female
+  MLS 7432 LOW
+    id: nl_NL-mls_7432-low
+    locale: nl-NL
+    gender label: Female
+  MLS MEDIUM (DUTCH)
+    id: nl_NL-mls-medium
+    locale: nl-NL
+    gender label: Female
+  PIM MEDIUM
+    id: nl_NL-pim-medium
+    locale: nl-NL
+    gender label: Male
+  RONNIE MEDIUM
+    id: nl_NL-ronnie-medium
+    locale: nl-NL
+    gender label: Male
+
+Piper English (Great Britain) Language
+--------------------------------------
+  ALAN LOW
+    id: en_GB-alan-low
+    locale: en-GB
+    gender label: Male
+  ALAN MEDIUM
+    id: en_GB-alan-medium
+    locale: en-GB
+    gender label: Male
+  ALBA MEDIUM
+    id: en_GB-alba-medium
+    locale: en-GB
+    gender label: Female
+  ARU MEDIUM
+    id: en_GB-aru-medium
+    locale: en-GB
+    gender label: Female
+  CORI HIGH
+    id: en_GB-cori-high
+    locale: en-GB
+    gender label: Female
+  CORI MEDIUM
+    id: en_GB-cori-medium
+    locale: en-GB
+    gender label: Female
+  JENNY DIOCO MEDIUM
+    id: en_GB-jenny_dioco-medium
+    locale: en-GB
+    gender label: Female
+  NORTHERN ENGLISH MALE MEDIUM
+    id: en_GB-northern_english_male-medium
+    locale: en-GB
+    gender label: Male
+  SEMAINE MEDIUM
+    id: en_GB-semaine-medium
+    locale: en-GB
+    gender label: Male
+  SOUTHERN ENGLISH FEMALE LOW
+    id: en_GB-southern_english_female-low
+    locale: en-GB
+    gender label: Female
+  VCTK MEDIUM
+    id: en_GB-vctk-medium
+    locale: en-GB
+    gender label: Male
+
+Piper English (United States) Language (part 1 of 2)
+----------------------------------------------------
+  ARCTIC MEDIUM
+    id: en_US-arctic-medium
+    locale: en-US
+    gender label: Male
+  BRYCE MEDIUM
+    id: en_US-bryce-medium
+    locale: en-US
+    gender label: Male
+  JOHN MEDIUM
+    id: en_US-john-medium
+    locale: en-US
+    gender label: Male
+  KRISTIN MEDIUM
+    id: en_US-kristin-medium
+    locale: en-US
+    gender label: Female
+  L2ARCTIC MEDIUM
+    id: en_US-l2arctic-medium
+    locale: en-US
+    gender label: Male
+  LESSAC HIGH
+    id: en_US-lessac-high
+    locale: en-US
+    gender label: Male
+  LIBRITTS HIGH
+    id: en_US-libritts-high
+    locale: en-US
+    gender label: Male
+  LIBRITTS R MEDIUM
+    id: en_US-libritts_r-medium
+    locale: en-US
+    gender label: Male
+  LJSPEECH HIGH
+    id: en_US-ljspeech-high
+    locale: en-US
+    gender label: Female
+  LJSPEECH MEDIUM
+    id: en_US-ljspeech-medium
+    locale: en-US
+    gender label: Female
+  NORMAN MEDIUM
+    id: en_US-norman-medium
+    locale: en-US
+    gender label: Male
+  RYAN HIGH
+    id: en_US-ryan-high
+    locale: en-US
+    gender label: Male
+
+Piper English (United States) Language (part 2 of 2)
+----------------------------------------------------
+  AMY LOW
+    id: en_US-amy-low
+    locale: en-US
+    gender label: Female
+  AMY MEDIUM
+    id: en_US-amy-medium
+    locale: en-US
+    gender label: Female
+  DANNY LOW
+    id: en_US-danny-low
+    locale: en-US
+    gender label: Male
+  HFC FEMALE MEDIUM
+    id: en_US-hfc_female-medium
+    locale: en-US
+    gender label: Female
+  HFC MALE MEDIUM
+    id: en_US-hfc_male-medium
+    locale: en-US
+    gender label: Male
+  JOE MEDIUM
+    id: en_US-joe-medium
+    locale: en-US
+    gender label: Male
+  KATHLEEN LOW
+    id: en_US-kathleen-low
+    locale: en-US
+    gender label: Female
+  KUSAL MEDIUM
+    id: en_US-kusal-medium
+    locale: en-US
+    gender label: Male
+  LESSAC LOW
+    id: en_US-lessac-low
+    locale: en-US
+    gender label: Male
+  LESSAC MEDIUM
+    id: en_US-lessac-medium
+    locale: en-US
+    gender label: Male
+  MIKE MEDIUM
+    id: en_US-mike-medium
+    locale: en-US
+    gender label: Male
+  REZA IBRAHIM MEDIUM (ENGLISH)
+    id: en_US-reza_ibrahim-medium
+    locale: en-US
+    gender label: Male
+  RYAN LOW
+    id: en_US-ryan-low
+    locale: en-US
+    gender label: Male
+  RYAN MEDIUM
+    id: en_US-ryan-medium
+    locale: en-US
+    gender label: Male
+  SAM MEDIUM
+    id: en_US-sam-medium
+    locale: en-US
+    gender label: Male
+
+Piper Estonian Language
+-----------------------
+  NEWS MEDIUM
+    id: et_EE-news-medium
+    locale: et-EE
+    gender label: Male
+
+Piper Farsi Language
+--------------------
+  AMIR MEDIUM
+    id: fa_IR-amir-medium
+    locale: fa-IR
+    gender label: Male
+  GANJI ADABI MEDIUM
+    id: fa_IR-ganji_adabi-medium
+    locale: fa-IR
+    gender label: Male
+  GANJI MEDIUM
+    id: fa_IR-ganji-medium
+    locale: fa-IR
+    gender label: Male
+  GYRO MEDIUM
+    id: fa_IR-gyro-medium
+    locale: fa-IR
+    gender label: Male
+  REZA IBRAHIM MEDIUM (FARSI)
+    id: fa_IR-reza_ibrahim-medium
+    locale: fa-IR
+    gender label: Male
+
+Piper Finnish Language
+----------------------
+  HARRI LOW
+    id: fi_FI-harri-low
+    locale: fi-FI
+    gender label: Male
+  HARRI MEDIUM
+    id: fi_FI-harri-medium
+    locale: fi-FI
+    gender label: Male
+
+Piper French Language
+---------------------
+  GILLES LOW
+    id: fr_FR-gilles-low
+    locale: fr-FR
+    gender label: Male
+  MLS 1840 LOW
+    id: fr_FR-mls_1840-low
+    locale: fr-FR
+    gender label: Female
+  MLS MEDIUM (FRENCH)
+    id: fr_FR-mls-medium
+    locale: fr-FR
+    gender label: Female
+  SIWIS LOW
+    id: fr_FR-siwis-low
+    locale: fr-FR
+    gender label: Female
+  SIWIS MEDIUM
+    id: fr_FR-siwis-medium
+    locale: fr-FR
+    gender label: Female
+  TOM MEDIUM
+    id: fr_FR-tom-medium
+    locale: fr-FR
+    gender label: Male
+  UPMC MEDIUM
+    id: fr_FR-upmc-medium
+    locale: fr-FR
+    gender label: Male
+
+Piper Georgian Language
+-----------------------
+  NATIA MEDIUM
+    id: ka_GE-natia-medium
+    locale: ka-GE
+    gender label: Female
+
+Piper German Language
+---------------------
+  EVA K X LOW
+    id: de_DE-eva_k-x_low
+    locale: de-DE
+    gender label: Female
+  KARLSSON LOW
+    id: de_DE-karlsson-low
+    locale: de-DE
+    gender label: Male
+  KERSTIN LOW
+    id: de_DE-kerstin-low
+    locale: de-DE
+    gender label: Female
+  MLS MEDIUM (GERMAN)
+    id: de_DE-mls-medium
+    locale: de-DE
+    gender label: Female
+  PAVOQUE LOW
+    id: de_DE-pavoque-low
+    locale: de-DE
+    gender label: Male
+  RAMONA LOW
+    id: de_DE-ramona-low
+    locale: de-DE
+    gender label: Female
+  THORSTEN EMOTIONAL MEDIUM
+    id: de_DE-thorsten_emotional-medium
+    locale: de-DE
+    gender label: Male
+  THORSTEN HIGH
+    id: de_DE-thorsten-high
+    locale: de-DE
+    gender label: Male
+  THORSTEN LOW
+    id: de_DE-thorsten-low
+    locale: de-DE
+    gender label: Male
+  THORSTEN MEDIUM
+    id: de_DE-thorsten-medium
+    locale: de-DE
+    gender label: Male
+
+Piper Greek Language
+--------------------
+  JOY MEDIUM
+    id: el_GR-joy-medium
+    locale: el-GR
+    gender label: Female
+  RAPUNZELINA LOW
+    id: el_GR-rapunzelina-low
+    locale: el-GR
+    gender label: Female
+  RAPUNZELINA MEDIUM
+    id: el_GR-rapunzelina-medium
+    locale: el-GR
+    gender label: Female
+
+Piper Hebrew Language
+---------------------
+  SASPEECH MEDIUM
+    id: he_IL-saspeech-medium
+    locale: he-IL
+    gender label: Male
+
+Piper Hindi Language
+--------------------
+  PRATHAM MEDIUM
+    id: hi_IN-pratham-medium
+    locale: hi-IN
+    gender label: Male
+  PRIYAMVADA MEDIUM
+    id: hi_IN-priyamvada-medium
+    locale: hi-IN
+    gender label: Female
+  ROHAN MEDIUM
+    id: hi_IN-rohan-medium
+    locale: hi-IN
+    gender label: Male
+
+Piper Hungarian Language
+------------------------
+  ANNA MEDIUM
+    id: hu_HU-anna-medium
+    locale: hu-HU
+    gender label: Female
+  BERTA MEDIUM
+    id: hu_HU-berta-medium
+    locale: hu-HU
+    gender label: Female
+  IMRE MEDIUM
+    id: hu_HU-imre-medium
+    locale: hu-HU
+    gender label: Male
+
+Piper Icelandic Language
+------------------------
+  BUI MEDIUM
+    id: is_IS-bui-medium
+    locale: is-IS
+    gender label: Male
+  SALKA MEDIUM
+    id: is_IS-salka-medium
+    locale: is-IS
+    gender label: Female
+  STEINN MEDIUM
+    id: is_IS-steinn-medium
+    locale: is-IS
+    gender label: Male
+  UGLA MEDIUM
+    id: is_IS-ugla-medium
+    locale: is-IS
+    gender label: Female
+
+Piper Indonesian Language
+-------------------------
+  NEWS TTS MEDIUM
+    id: id_ID-news_tts-medium
+    locale: id-ID
+    gender label: Male
+
+Piper Italian Language
+----------------------
+  PAOLA MEDIUM
+    id: it_IT-paola-medium
+    locale: it-IT
+    gender label: Female
+  RICCARDO X LOW
+    id: it_IT-riccardo-x_low
+    locale: it-IT
+    gender label: Male
+  SERENA HIGH
+    id: it_IT-serena-high
+    locale: it-IT
+    gender label: Female
+  SERENA MEDIUM
+    id: it_IT-serena-medium
+    locale: it-IT
+    gender label: Female
+
+Piper Japanese Language
+-----------------------
+  HI FI CAPTAIN MEDIUM
+    id: ja_JP-hi_fi_captain-medium
+    locale: ja-JP
+    gender label: Male
+
+Piper Kazakh Language
+---------------------
+  ISEKE X LOW
+    id: kk_KZ-iseke-x_low
+    locale: kk-KZ
+    gender label: Male
+  ISSAI HIGH
+    id: kk_KZ-issai-high
+    locale: kk-KZ
+    gender label: Male
+  RAYA X LOW
+    id: kk_KZ-raya-x_low
+    locale: kk-KZ
+    gender label: Female
+
+Piper Korean Language
+---------------------
+  KSS MEDIUM
+    id: ko_KR-kss-medium
+    locale: ko-KR
+    gender label: Male
+
+Piper Kurmanji Kurdish Language
+-------------------------------
+  BERFIN RENAS MEDIUM
+    id: ku_TR-berfin_renas-medium
+    locale: ku-TR
+    gender label: Male
+
+Piper Latvian Language
+----------------------
+  AIVARS MEDIUM
+    id: lv_LV-aivars-medium
+    locale: lv-LV
+    gender label: Male
+
+Piper Lithuanian Language
+-------------------------
+  REGINUTE1 MEDIUM
+    id: lt_LT-reginute1-medium
+    locale: lt-LT
+    gender label: Female
+
+Piper Luxembourgish Language
+----------------------------
+  MARYLUX MEDIUM
+    id: lb_LU-marylux-medium
+    locale: lb-LU
+    gender label: Female
+
+Piper Malayalam Language
+------------------------
+  ARJUN MEDIUM
+    id: ml_IN-arjun-medium
+    locale: ml-IN
+    gender label: Male
+  MEERA MEDIUM
+    id: ml_IN-meera-medium
+    locale: ml-IN
+    gender label: Female
+
+Piper Marathi Language
+----------------------
+  GOOGLE MEDIUM (MARATHI)
+    id: mr_IN-google-medium
+    locale: mr-IN
+    gender label: Male
+
+Piper Nepali Language
+---------------------
+  CHITWAN MEDIUM
+    id: ne_NP-chitwan-medium
+    locale: ne-NP
+    gender label: Male
+  GOOGLE MEDIUM (NEPALI)
+    id: ne_NP-google-medium
+    locale: ne-NP
+    gender label: Male
+  GOOGLE X LOW
+    id: ne_NP-google-x_low
+    locale: ne-NP
+    gender label: Male
+
+Piper Norwegian Language
+------------------------
+  NVCC MEDIUM
+    id: no_NO-nvcc-medium
+    locale: no-NO
+    gender label: Male
+  TALESYNTESE MEDIUM (NORWEGIAN)
+    id: no_NO-talesyntese-medium
+    locale: no-NO
+    gender label: Male
+
+Piper Polish Language
+---------------------
+  BASS HIGH
+    id: pl_PL-bass-high
+    locale: pl-PL
+    gender label: Male
+  DARKMAN MEDIUM
+    id: pl_PL-darkman-medium
+    locale: pl-PL
+    gender label: Male
+  GOSIA MEDIUM
+    id: pl_PL-gosia-medium
+    locale: pl-PL
+    gender label: Female
+  MC SPEECH MEDIUM
+    id: pl_PL-mc_speech-medium
+    locale: pl-PL
+    gender label: Male
+  MLS 6892 LOW
+    id: pl_PL-mls_6892-low
+    locale: pl-PL
+    gender label: Female
+
+Piper Portuguese (Brazil) Language
+----------------------------------
+  CADU MEDIUM
+    id: pt_BR-cadu-medium
+    locale: pt-BR
+    gender label: Male
+  EDRESSON LOW
+    id: pt_BR-edresson-low
+    locale: pt-BR
+    gender label: Male
+  FABER MEDIUM
+    id: pt_BR-faber-medium
+    locale: pt-BR
+    gender label: Male
+  JEFF MEDIUM
+    id: pt_BR-jeff-medium
+    locale: pt-BR
+    gender label: Male
+
+Piper Portuguese (Portugal) Language
+------------------------------------
+  TUGÃO MEDIUM
+    id: pt_PT-tugao-medium
+    locale: pt-PT
+    gender label: Male
+
+Piper Romanian Language
+-----------------------
+  MIHAI MEDIUM
+    id: ro_RO-mihai-medium
+    locale: ro-RO
+    gender label: Male
+
+Piper Russian Language
+----------------------
+  DENIS MEDIUM
+    id: ru_RU-denis-medium
+    locale: ru-RU
+    gender label: Male
+  DMITRI MEDIUM
+    id: ru_RU-dmitri-medium
+    locale: ru-RU
+    gender label: Male
+  IRINA MEDIUM
+    id: ru_RU-irina-medium
+    locale: ru-RU
+    gender label: Female
+  RUSLAN MEDIUM
+    id: ru_RU-ruslan-medium
+    locale: ru-RU
+    gender label: Male
+
+Piper Serbian Language
+----------------------
+  SERBSKI INSTITUT MEDIUM
+    id: sr_RS-serbski_institut-medium
+    locale: sr-RS
+    gender label: Male
+
+Piper Slovak Language
+---------------------
+  LILI MEDIUM
+    id: sk_SK-lili-medium
+    locale: sk-SK
+    gender label: Female
+
+Piper Slovenian Language
+------------------------
+  ARTUR MEDIUM
+    id: sl_SI-artur-medium
+    locale: sl-SI
+    gender label: Male
+
+Piper Spanish (Argentina) Language
+----------------------------------
+  DANIELA HIGH
+    id: es_AR-daniela-high
+    locale: es-AR
+    gender label: Female
+
+Piper Spanish (Mexico) Language
+-------------------------------
+  ALD MEDIUM
+    id: es_MX-ald-medium
+    locale: es-MX
+    gender label: Male
+  ALD X LOW
+    id: es_MX-ald-x_low
+    locale: es-MX
+    gender label: Male
+  CLAUDE HIGH
+    id: es_MX-claude-high
+    locale: es-MX
+    gender label: Male
+
+Piper Spanish (Spain) Language
+------------------------------
+  CARLFM X LOW
+    id: es_ES-carlfm-x_low
+    locale: es-ES
+    gender label: Male
+  DAVEFX MEDIUM
+    id: es_ES-davefx-medium
+    locale: es-ES
+    gender label: Male
+  MLS 10246 LOW
+    id: es_ES-mls_10246-low
+    locale: es-ES
+    gender label: Female
+  MLS 9972 LOW
+    id: es_ES-mls_9972-low
+    locale: es-ES
+    gender label: Female
+  SHARVARD MEDIUM
+    id: es_ES-sharvard-medium
+    locale: es-ES
+    gender label: Male
+
+Piper Swahili Language
+----------------------
+  LANFRICA MEDIUM
+    id: sw_CD-lanfrica-medium
+    locale: sw-CD
+    gender label: Male
+
+Piper Swedish Language
+----------------------
+  ALMA MEDIUM
+    id: sv_SE-alma-medium
+    locale: sv-SE
+    gender label: Female
+  LISA MEDIUM
+    id: sv_SE-lisa-medium
+    locale: sv-SE
+    gender label: Female
+  NST MEDIUM
+    id: sv_SE-nst-medium
+    locale: sv-SE
+    gender label: Male
+
+Piper Telugu Language
+---------------------
+  MAYA MEDIUM
+    id: te_IN-maya-medium
+    locale: te-IN
+    gender label: Female
+  PADMAVATHI MEDIUM
+    id: te_IN-padmavathi-medium
+    locale: te-IN
+    gender label: Female
+  VENKATESH MEDIUM
+    id: te_IN-venkatesh-medium
+    locale: te-IN
+    gender label: Male
+
+Piper Thai Language
+-------------------
+  TSYNC2 MEDIUM
+    id: th_TH-tsync2-medium
+    locale: th-TH
+    gender label: Male
+
+Piper Turkish Language
+----------------------
+  DFKI MEDIUM
+    id: tr_TR-dfki-medium
+    locale: tr-TR
+    gender label: Male
+
+Piper Ukrainian Language
+------------------------
+  LADA X LOW
+    id: uk_UA-lada-x_low
+    locale: uk-UA
+    gender label: Female
+  MYKYTA HIGH
+    id: uk_UA-mykyta-high
+    locale: uk-UA
+    gender label: Male
+  OLEKSA HIGH
+    id: uk_UA-oleksa-high
+    locale: uk-UA
+    gender label: Male
+  TETIANA HIGH
+    id: uk_UA-tetiana-high
+    locale: uk-UA
+    gender label: Female
+  UKRAINIAN TTS MEDIUM
+    id: uk_UA-ukrainian_tts-medium
+    locale: uk-UA
+    gender label: Male
+
+Piper Urdu Language
+-------------------
+  AEGIS FEMALE MEDIUM
+    id: ur_PK-aegis_female-medium
+    locale: ur-PK
+    gender label: Female
+  FASIH MEDIUM
+    id: ur_PK-fasih-medium
+    locale: ur-PK
+    gender label: Male
+
+Piper Vietnamese Language
+-------------------------
+  25HOURS SINGLE LOW
+    id: vi_VN-25hours_single-low
+    locale: vi-VN
+    gender label: Male
+  VAIS1000 MEDIUM
+    id: vi_VN-vais1000-medium
+    locale: vi-VN
+    gender label: Male
+  VIVOS X LOW
+    id: vi_VN-vivos-x_low
+    locale: vi-VN
+    gender label: Male
+
+Piper Welsh Language
+--------------------
+  BU TTS MEDIUM
+    id: cy_GB-bu_tts-medium
+    locale: cy-GB
+    gender label: Male
+  GWRYW GOGLEDDOL MEDIUM
+    id: cy_GB-gwryw_gogleddol-medium
+    locale: cy-GB
+    gender label: Male
+

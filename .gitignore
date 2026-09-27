@@ -1,0 +1,9 @@
+﻿build/
+payload/
+dist/
+third_party/sherpa/
+third_party/espeak/
+third_party/voices/
+*.onnx
+*.user
+*.pdb
