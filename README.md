@@ -23,7 +23,14 @@ The source in this repository is what the installers are built from.
 
 ## How installation works
 
-Every language is its own installer, for example `Piper-Polish-Language-Setup.exe`.
+Every language is its own installer, for example:
+
+- `Piper-English-United-States-Language-1-Setup.exe`
+- `Piper-English-United-States-Language-2-Setup.exe`
+- `Piper-English-Great-Britain-Language-Setup.exe`
+- `Piper-German-Language-Setup.exe`
+- `Piper-French-Language-Setup.exe`
+- `Piper-Spanish-Spain-Language-Setup.exe`
 
 All of them install into the same folder:
 
@@ -31,12 +38,10 @@ All of them install into the same folder:
 
 - The first language package installs the shared engine (SAPI libraries, Piper runtime, eSpeak data) and that language's voices.
 - A later language package leaves the engine where it is and adds only its own voices.
-- Each package has its own entry in Windows **Apps & features**. Uninstalling Polish removes the Polish voices and leaves German, English, or any other installed language in place.
+- Each package has its own entry in Windows **Apps & features**. Uninstalling one English (United States) part removes that part's voices and leaves the other American English part, English (Great Britain), German, French, Spanish, or any other installed language in place.
 - The shared engine is removed only when the last language package is uninstalled.
 
-English (United States) is split into two installers because one file would be too large for a GitHub release asset. Both parts share the same engine.
-
-If an older "Polskie głosy" / Piper Bass High installer is still present, uninstall it before installing `Piper-Polish-Language-Setup.exe`. The new package uses a new folder.
+English (United States) is split into two installers because one file would be too large for a GitHub release asset. Both parts share the same engine and add different American English voices. Install either part, or both.
 
 ## Use in a browser
 
@@ -44,7 +49,7 @@ If an older "Polskie głosy" / Piper Bass High installer is still present, unins
 2. Quit the browser completely, including its tray icon, and open it again.
 3. Use the browser's read-aloud command, or pick the Piper voice in the browser's speech settings.
 
-The voice list shows names such as **BASS HIGH** or **AMY MEDIUM**. The Windows language of each voice follows the Piper locale, so a Polish voice is offered for Polish text.
+The voice list shows names such as **LESSAC MEDIUM**, **AMY MEDIUM**, and **ALBA MEDIUM**. The Windows language of each voice follows the Piper locale, so an American English voice is offered for English (United States) text and a British English voice for English (United Kingdom) text.
 
 You can listen to samples of many of these languages on the [Piper samples](https://rhasspy.github.io/piper-samples/) page.
 
@@ -76,3 +81,8 @@ This project was written with the help of [Cursor](https://cursor.com).
 - [Building from source](docs/BUILDING.md)
 - [Attributions](docs/ATTRIBUTIONS.md)
 - [Security notes](SECURITY.md)
+
+## 🔮 What's Next?
+
+- 🔄 **Expand Compatibility**: Native support for Windows TTS programs such as Balabolka, TextAloud, DSpeech, NaturalReader, Panopreter, and ClaroRead.
+- 🎧 **Enhance Fidelity**: Continuous improvements to audio rendering quality for an even more immersive experience.
