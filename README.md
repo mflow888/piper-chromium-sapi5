@@ -46,6 +46,8 @@ If an older "Polskie głosy" / Piper Bass High installer is still present, unins
 
 The voice list shows names such as **BASS HIGH** or **AMY MEDIUM**. The Windows language of each voice follows the Piper locale, so a Polish voice is offered for Polish text.
 
+You can listen to samples of many of these languages on the [Piper samples](https://rhasspy.github.io/piper-samples/) page.
+
 The first time a voice is used, Windows has to load the neural model. That still takes a short moment. After that, speech starts from the first short piece of text instead of waiting for the whole page, and Stop returns without finishing the rest of the page. The loaded voice stays in the browser process until the browser exits, so the next read starts sooner.
 
 ## Licenses
@@ -61,7 +63,7 @@ The installers also include other people's work. Full texts are in [`licenses`](
 | eSpeak NG data | GNU GPL 3.0 |
 | Piper voice models | The license named in each model card (CC0, CC BY 4.0, Apache 2.0, or another license stated by the dataset) |
 
-Model cards are in [`licenses/karty`](licenses/karty). A per-language index is in [docs/VOICES.md](docs/VOICES.md).
+Model cards are in [`licenses/karty`](licenses/karty). A per-language index is in [docs/VOICES.md](docs/VOICES.md). Voices whose license requires credit are listed in [docs/ATTRIBUTIONS.md](docs/ATTRIBUTIONS.md).
 
 ## Built with Cursor
 
@@ -72,5 +74,5 @@ This project was written with the help of [Cursor](https://cursor.com).
 - [Installing and removing voices](docs/INSTALL.md)
 - [How the engine and language packages fit together](docs/ARCHITECTURE.md)
 - [Building from source](docs/BUILDING.md)
-- [Publishing on GitHub](docs/PUBLISHING.md)
+- [Attributions](docs/ATTRIBUTIONS.md)
 - [Security notes](SECURITY.md)
