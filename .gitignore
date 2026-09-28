@@ -1,6 +1,7 @@
 ﻿build/
 payload/
 dist/
+dist2/
 third_party/sherpa/
 third_party/espeak/
 third_party/voices/

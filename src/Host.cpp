@@ -117,9 +117,25 @@ void ServeClient(HANDLE pipe, const std::wstring& dir, std::unique_ptr<SherpaTts
   }
 
   std::vector<int16_t> pcm;
-  if (!text.empty() && !tts->Synthesize(text, request.speed, request.gain, pcm, error)) {
+  bool canceled = false;
+  HANDLE cancelEvent = CreateEventW(nullptr, TRUE, FALSE, L"Local\\MFPiperHostCancel");
+  auto hostCanceled = [](void* argument) -> bool {
+    HANDLE event = static_cast<HANDLE>(argument);
+    return event && WaitForSingleObject(event, 0) == WAIT_OBJECT_0;
+  };
+  if (!text.empty() &&
+      !tts->Synthesize(text, request.speed, request.gain, pcm, error, &canceled, hostCanceled, cancelEvent)) {
+    if (cancelEvent) {
+      CloseHandle(cancelEvent);
+    }
     ReplyError(pipe, error.empty() ? L"Synthesis failed." : error);
     return;
+  }
+  if (cancelEvent) {
+    CloseHandle(cancelEvent);
+  }
+  if (canceled) {
+    pcm.clear();
   }
 
   SynthResponseHeader response;
@@ -138,7 +154,7 @@ void ServeClient(HANDLE pipe, const std::wstring& dir, std::unique_ptr<SherpaTts
 }  // namespace
 
 int WINAPI wWinMain(HINSTANCE, HINSTANCE, PWSTR, int) {
-  HANDLE mutex = CreateMutexW(nullptr, FALSE, L"Local\\PiperBassHighHost");
+  HANDLE mutex = CreateMutexW(nullptr, FALSE, L"Local\\MFPiperHost");
   if (!mutex) {
     return 1;
   }

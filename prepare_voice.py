@@ -177,7 +177,7 @@ def copy_runtime() -> None:
     runtime = PAYLOAD / "espeak-ng-data"
     if not runtime.exists():
         shutil.copytree(ESPEAK, runtime)
-    (PAYLOAD / "engine.version").write_text("1.3.0\n", encoding="utf-8", newline="\n")
+    (PAYLOAD / "engine.version").write_text("1.4.0\n", encoding="utf-8", newline="\n")
 
 
 def selected_voices(language: str | None, all_languages: bool) -> list[Voice]:

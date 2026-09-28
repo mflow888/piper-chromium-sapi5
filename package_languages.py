@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import subprocess
 from pathlib import Path
 
@@ -11,7 +12,7 @@ from piper_catalog import ROOT, VERSION, Pack, Voice, build_packs, find_pack
 PAYLOAD = ROOT / "payload"
 LICENSES = ROOT / "licenses"
 INSTALLER = ROOT / "installer"
-DIST = ROOT / "dist"
+DIST = ROOT / "dist2"
 ISS_ROOT = ROOT / "build" / "iss"
 
 
@@ -25,10 +26,10 @@ def write_texts(folder: Path, pack: Pack) -> None:
     about = f"""{pack.title}
 Version {VERSION}
 
-This package adds Piper neural voices to Windows so Chromium browsers can speak with them.
-Brave, Chrome, Microsoft Edge, and other Chromium-based browsers are the target.
+This package adds Piper neural voices to Windows so Chromium-based browsers can speak with them.
+Google Chrome, Brave, Microsoft Edge, and other browsers built on Chromium are the target.
 
-The same voices are registered with the Windows SAPI5 speech interface. Narrator and many ordinary Windows programs may not use them. That limitation is expected. The project was made so browsers can select these SAPI5 voices.
+The same voices are registered with the Windows SAPI5 speech interface. They also work in TextAloud, including word highlighting. TextAloud is a product of NextUp Technologies. This project is not affiliated with NextUp Technologies. They also work in Open WebUI, and they may work in other programs that speak through SAPI5. Narrator may keep using its own voices.
 
 This software does not contain malicious code. It does not collect telemetry, it does not download anything while it is running, and it does not start with Windows. The synthesis host runs only while a program is speaking.
 
@@ -42,9 +43,9 @@ This project was written with the help of Cursor (https://cursor.com).
 """
     after = f"""The voices from this package are now registered.
 
-Open Brave, Chrome, Edge, or another Chromium browser and read a page aloud, or pick the voice in the browser's speech settings. Quit the browser completely, including its tray icon, and open it again if the new voice is not listed yet.
+Quit and reopen any program that will use the voice, including Google Chrome, Brave, Microsoft Edge, TextAloud, or Open WebUI, so it loads the new voice list. For a browser, check the system tray and exit it completely before opening it again.
 
-Narrator and many Windows desktop programs may ignore these voices. Browser playback is the supported use.
+Then read aloud, or pick the Piper voice in the program's speech settings. The voice reports each word as it is spoken, so a program that highlights text can follow along. Narrator may keep using its own voices.
 
 The shared Piper SAPI5 engine stays installed when you add another language later. Uninstalling this package removes only these voices:
 
@@ -139,7 +140,8 @@ def pascal_remove(voices: list[Voice]) -> str:
     return "\n".join(lines)
 
 
-def write_iss(folder: Path, pack: Pack) -> Path:
+def write_iss(folder: Path, pack: Pack, dist: Path) -> Path:
+    output_dir = os.path.relpath(dist.resolve(), folder.resolve())
     voice_name = iss_quote(pack.voices[0].display_name)
     sample = iss_quote(pack.sample)
     icon_params = (
@@ -161,7 +163,7 @@ DefaultDirName={{autopf}}\\Piper SAPI5
 DisableDirPage=yes
 DefaultGroupName=Piper SAPI5
 DisableProgramGroupPage=yes
-OutputDir=..\\..\\..\\dist
+OutputDir={output_dir}
 OutputBaseFilename={pack.setup_name}
 Compression=lzma2
 SolidCompression=no
@@ -195,7 +197,7 @@ Name: "custom"; Description: "Selected voices"; Flags: iscustom
 [Files]
 Source: "..\\..\\..\\payload\\PiperBassHighSAPI.dll"; DestDir: "{{app}}"; Flags: ignoreversion sharedfile
 Source: "..\\..\\..\\payload\\PiperBassHighSAPI32.dll"; DestDir: "{{app}}"; Flags: ignoreversion sharedfile
-Source: "..\\..\\..\\payload\\PiperBassHighHost.exe"; DestDir: "{{app}}"; Flags: ignoreversion sharedfile
+Source: "..\\..\\..\\payload\\MFPiperHost.exe"; DestDir: "{{app}}"; Flags: ignoreversion sharedfile
 Source: "..\\..\\..\\payload\\sherpa-onnx-c-api.dll"; DestDir: "{{app}}"; Flags: ignoreversion sharedfile
 Source: "..\\..\\..\\payload\\onnxruntime.dll"; DestDir: "{{app}}"; Flags: ignoreversion sharedfile
 Source: "..\\..\\..\\payload\\onnxruntime_providers_shared.dll"; DestDir: "{{app}}"; Flags: ignoreversion sharedfile
@@ -266,6 +268,7 @@ function PrepareToInstall(var NeedsRestart: Boolean): String;
 var
   ResultCode: Integer;
 begin
+  Exec(ExpandConstant('{{sys}}\\taskkill.exe'), '/F /IM MFPiperHost.exe', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
   Exec(ExpandConstant('{{sys}}\\taskkill.exe'), '/F /IM PiperBassHighHost.exe', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
   Result := '';
 end;
@@ -284,6 +287,7 @@ var
 begin
   if CurUninstallStep <> usUninstall then
     Exit;
+  Exec(ExpandConstant('{{sys}}\\taskkill.exe'), '/F /IM MFPiperHost.exe', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
   Exec(ExpandConstant('{{sys}}\\taskkill.exe'), '/F /IM PiperBassHighHost.exe', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
   RemovePackVoices;
   if AnyVoiceLeft then
@@ -313,17 +317,17 @@ def find_iscc() -> Path:
     raise SystemExit("Inno Setup 6 was not found.")
 
 
-def package(pack: Pack) -> Path:
+def package(pack: Pack, dist: Path) -> Path:
     missing = [voice.voice_id for voice in pack.voices if not (PAYLOAD / "voices" / voice.voice_id / "model.onnx").exists()]
     if missing:
         raise SystemExit("Missing prepared voices: " + ", ".join(missing))
     folder = ISS_ROOT / pack.pack_id
     write_texts(folder, pack)
-    iss = write_iss(folder, pack)
-    DIST.mkdir(parents=True, exist_ok=True)
+    iss = write_iss(folder, pack, dist)
+    dist.mkdir(parents=True, exist_ok=True)
     print("compiling", pack.setup_name)
     subprocess.run([str(find_iscc()), str(iss)], check=True)
-    setup = DIST / f"{pack.setup_name}.exe"
+    setup = dist / f"{pack.setup_name}.exe"
     if not setup.exists():
         raise SystemExit(f"Installer was not created: {setup}")
     print("created", setup)
@@ -334,14 +338,16 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Build Piper language installers.")
     parser.add_argument("--language", help="Locale code, for example pl_PL")
     parser.add_argument("--all", action="store_true", help="Build every language pack")
+    parser.add_argument("--dist", default=str(DIST), help="Directory for the finished installer")
     args = parser.parse_args()
+    dist = Path(args.dist)
     packs = build_packs()
     if args.all:
         chosen = packs
     else:
         chosen = find_pack(args.language or "pl_PL", packs)
     for pack in chosen:
-        package(pack)
+        package(pack, dist)
 
 
 if __name__ == "__main__":

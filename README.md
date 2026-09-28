@@ -1,10 +1,12 @@
 # Piper SAPI5
 
-Offline [Piper](https://github.com/rhasspy/piper) neural voices for Windows, exposed through the SAPI5 speech interface so Chromium browsers can use them.
+Offline [Piper](https://github.com/rhasspy/piper) neural voices for Windows, exposed through the SAPI5 speech interface.
 
-Brave, Chrome, Microsoft Edge, and other Chromium-based browsers can select these voices and read with them. That was the goal of this project: add Piper SAPI5 voices to Brave and Chrome.
+The goal of this project is Piper voices in Chromium-based browsers: Google Chrome, Brave, Microsoft Edge, and other browsers built on Chromium.
 
-Narrator and many ordinary Windows programs may not speak with these voices. That limitation is expected. Browser playback is the supported use.
+The same voices also work in [TextAloud](https://nextup.com/TextAloud/), including word highlighting while the text is read. TextAloud is a product of NextUp Technologies. This project is not affiliated with NextUp Technologies.
+
+They also work in [Open WebUI](https://github.com/open-webui/open-webui), and they may work in other programs that speak through Windows SAPI5. Narrator may keep using its own voices.
 
 The voices run on this computer. Nothing is sent to a server at speech time.
 
@@ -16,7 +18,7 @@ This project does not contain malicious code.
 - It does not download anything while a voice is speaking.
 - It does not install a browser extension.
 - It does not add a program that starts when Windows starts.
-- The only background process is `PiperBassHighHost.exe`, and only while a 32-bit program is speaking. Chromium browsers are 64-bit and speak inside the browser process.
+- The only background process is `MFPiperHost.exe`, and only while a 32-bit program is speaking. Chromium-based browsers are 64-bit and speak inside the browser process.
 - Installing a language package copies voice files, the shared speech engine, and SAPI voice registration. Uninstalling that package removes those voices.
 
 The source in this repository is what the installers are built from.
@@ -43,17 +45,19 @@ All of them install into the same folder:
 
 English (United States) is split into two installers because one file would be too large for a GitHub release asset. Both parts share the same engine and add different American English voices. Install either part, or both.
 
-## Use in a browser
+## Use the voices
 
 1. Install the language package you want.
-2. Quit the browser completely, including its tray icon, and open it again.
-3. Use the browser's read-aloud command, or pick the Piper voice in the browser's speech settings.
+2. Quit the program completely, including a browser's tray icon, and open it again.
+3. Pick the Piper voice in the speech settings, or use the program's read-aloud command.
+
+In a Chromium-based browser, use the browser's read-aloud command. In TextAloud, choose the Piper voice and read; the current word is highlighted. In Open WebUI, select the installed Piper voice where that program lists Windows voices.
 
 The voice list shows names such as **LESSAC MEDIUM**, **AMY MEDIUM**, and **ALBA MEDIUM**. The Windows language of each voice follows the Piper locale, so an American English voice is offered for English (United States) text and a British English voice for English (United Kingdom) text.
 
 You can listen to samples of many of these languages on the [Piper samples](https://rhasspy.github.io/piper-samples/) page.
 
-The first time a voice is used, Windows has to load the neural model. That still takes a short moment. After that, speech starts from the first short piece of text instead of waiting for the whole page, and Stop returns without finishing the rest of the page. The loaded voice stays in the browser process until the browser exits, so the next read starts sooner.
+The first time a voice is used, Windows has to load the neural model. That still takes a short moment. After that, speech starts from the first few words, and Stop drops audio that has not been played yet. The engine reports each word and sentence to Windows, so a program that highlights text can follow the voice. The loaded voice stays in the browser process until the browser exits, so the next read starts sooner.
 
 ## Licenses
 
@@ -84,7 +88,7 @@ This project was written with the help of [Cursor](https://cursor.com).
 
 ## 🔮 What's Next?
 
-- 🔄 **Expand Compatibility**: Native support for Windows TTS programs such as Balabolka, TextAloud, DSpeech, NaturalReader, Panopreter, and ClaroRead.
+- 🔄 **Expand Compatibility**: Native support for more Windows TTS programs, such as Balabolka, DSpeech, NaturalReader, Panopreter, and ClaroRead.
 - 🎧 **Enhance Fidelity**: Continuous improvements to audio rendering quality for an even more immersive experience.
 
 ## 🔗 Related Resources

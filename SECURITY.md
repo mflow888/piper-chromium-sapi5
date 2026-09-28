@@ -19,7 +19,7 @@ What they do not do:
 
 The 64-bit speech library stays loaded inside the browser process after the first use of a voice, so the next read does not have to load the neural model again. That cache ends when the browser process exits. It is not a separate startup program.
 
-`PiperBassHighHost.exe` is started only when a 32-bit program asks a Piper voice to speak. Chromium browsers are 64-bit and do not need that host. The host is not registered to start with Windows.
+`MFPiperHost.exe` is started only when a 32-bit program asks a Piper voice to speak. Chromium browsers are 64-bit and do not need that host. The host is not registered to start with Windows.
 
 Voice models are the published Piper ONNX files (and the prepared Polish BASS HIGH model). They are data for the speech engine, not programs.
 

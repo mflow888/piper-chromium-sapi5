@@ -26,13 +26,13 @@ Other languages, including English (Great Britain), German, French, and Spanish 
 
 The first package installs the engine and its voices. The next package sees the engine already there, leaves those engine files in place, and adds only the new voice folders.
 
-## Use the voice in Brave or Chrome
+## Use the voice
 
 1. Finish the setup.
-2. Quit the browser completely. Check the system tray as well, then open the browser again.
-3. Use the browser's read-aloud feature, or choose the Piper voice in the browser's speech settings.
+2. Quit the program completely. For a browser, check the system tray as well, then open the program again.
+3. Choose the Piper voice in the speech settings, or use the program's read-aloud command.
 
-Narrator, and many classic Windows programs, may not list or speak these voices. The supported path is a Chromium browser (Brave, Chrome, Edge, and other Chromium browsers).
+The goal is Chromium-based browsers: Google Chrome, Brave, Microsoft Edge, and other browsers built on Chromium. The voices also work in TextAloud, including word highlighting. TextAloud is a product of NextUp Technologies. This project is not affiliated with NextUp Technologies. The voices also work in Open WebUI, and they may work in other programs that speak through Windows SAPI5. Narrator may keep using its own voices.
 
 ## What the names look like
 

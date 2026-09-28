@@ -37,7 +37,7 @@ bool ReadExact(HANDLE pipe, void* data, DWORD size) {
 }
 
 void StartHost(const std::wstring& dir) {
-  std::wstring exe = dir + L"\\PiperBassHighHost.exe";
+  std::wstring exe = dir + L"\\MFPiperHost.exe";
   STARTUPINFOW startup;
   ZeroMemory(&startup, sizeof(startup));
   startup.cb = sizeof(startup);

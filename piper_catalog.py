@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parent
 VOICES_JSON_URL = "https://huggingface.co/rhasspy/piper-voices/resolve/main/voices.json"
 HF = "https://huggingface.co/rhasspy/piper-voices/resolve/main/"
 APP_NAMESPACE = uuid.UUID("6f1c9a20-4b7e-4d19-9a30-c5e8b1d47f02")
-VERSION = "1.3.0"
+VERSION = "1.4.0"
 # Keep each language installer under GitHub's 2 GB release-asset limit.
 MAX_PACK_BYTES = 1_050_000_000
 

@@ -28,7 +28,7 @@ powershell -ExecutionPolicy Bypass -File build.ps1 -Language pl_PL
 
 The installer is written to:
 
-`dist\Piper-Polish-Language-Setup.exe`
+`dist2\Piper-Polish-Language-Setup.exe`
 
 Another language uses its Piper locale code:
 
@@ -58,10 +58,10 @@ powershell -ExecutionPolicy Bypass -File build.ps1 -AllLanguages -PackageOnly
 
 `prepare_voice.py` downloads a voice, writes `tokens.txt` and `voice.txt`, and stores the ONNX model in a form sherpa-onnx can load.
 
-`package_languages.py` writes an English Inno Setup script for each language pack and compiles `dist\Piper-<Language>-Language-Setup.exe`.
+`package_languages.py` writes an English Inno Setup script for each language pack and compiles `dist2\Piper-<Language>-Language-Setup.exe`.
 
 The generated scripts are under `build\iss\`. That directory is a build output, not something to commit.
 
 ## Internal file names
 
-The installer file names are language names. A few binaries inside the install folder still use the historical name `PiperBassHigh`, including the SAPI DLL and the 32-bit host. Those names are the engine's COM identity. Language packages share them on purpose so a second language does not register a second engine.
+The installer file names are language names. The SAPI libraries inside the install folder keep the historical name PiperBassHigh: `PiperBassHighSAPI.dll` and `PiperBassHighSAPI32.dll`. That name is the engine's COM identity. Language packages share those libraries on purpose so a second language does not register a second engine. The 32-bit synthesizer process is `MFPiperHost.exe`.

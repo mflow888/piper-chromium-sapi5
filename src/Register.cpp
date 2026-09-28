@@ -92,7 +92,7 @@ HRESULT WriteVoice(const std::wstring& tokenPath, const wchar_t* clsid, const wc
   if (SUCCEEDED(hr)) hr = SetString(key, L"Language", meta.langId.c_str());
   if (SUCCEEDED(hr)) hr = SetString(key, L"Name", meta.name.c_str());
   if (SUCCEEDED(hr)) hr = SetString(key, L"Vendor", L"Piper");
-  if (SUCCEEDED(hr)) hr = SetString(key, L"Version", L"1.3");
+  if (SUCCEEDED(hr)) hr = SetString(key, L"Version", L"1.4");
   RegCloseKey(key);
   return hr;
 }

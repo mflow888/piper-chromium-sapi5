@@ -6,7 +6,7 @@ PRODUCTVERSION 1,4,0,0
 FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
 FILEFLAGS 0
 FILEOS VOS_NT_WINDOWS32
-FILETYPE VFT_DLL
+FILETYPE VFT_APP
 FILESUBTYPE VFT2_UNKNOWN
 BEGIN
     BLOCK "StringFileInfo"
@@ -14,10 +14,10 @@ BEGIN
         BLOCK "040904B0"
         BEGIN
             VALUE "CompanyName", "Piper SAPI5"
-            VALUE "FileDescription", "Piper SAPI5 voices for Chromium browsers"
+            VALUE "FileDescription", "Piper SAPI5 speech host"
             VALUE "FileVersion", "1.4.0.0"
-            VALUE "InternalName", "PiperBassHighSAPI.dll"
-            VALUE "OriginalFilename", "PiperBassHighSAPI.dll"
+            VALUE "InternalName", "MFPiperHost.exe"
+            VALUE "OriginalFilename", "MFPiperHost.exe"
             VALUE "ProductName", "Piper SAPI5"
             VALUE "ProductVersion", "1.4.0.0"
         END
