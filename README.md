@@ -84,12 +84,8 @@ This project was written with the help of [Cursor](https://cursor.com).
 - [How the engine and language packages fit together](docs/ARCHITECTURE.md)
 - [Building from source](docs/BUILDING.md)
 - [Attributions](docs/ATTRIBUTIONS.md)
+- [Piper versions used for each installer](docs/PIPER-VERSIONS.md)
 - [Security notes](SECURITY.md)
-
-## 🔮 What's Next?
-
-- 🔄 **Expand Compatibility**: Native support for more Windows TTS programs, such as Balabolka, DSpeech, NaturalReader, Panopreter, and ClaroRead.
-- 🎧 **Enhance Fidelity**: Continuous improvements to audio rendering quality for an even more immersive experience.
 
 ## 🔗 Related Resources
 
